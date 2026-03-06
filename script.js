@@ -1,7 +1,7 @@
 function mostrarMensaje(){
 
 document.getElementById("mensaje").innerHTML=
-"Mi amor ❤️<br><br>Hoy en el Día de la Mujer quiero recordarte lo maravillosa que eres. Gracias por tu amor, por tu sonrisa y por cada momento hermoso que compartimos.<br><br>Eres una mujer increíble y me siento muy afortunado de tenerte en mi vida. 🌹<br><br>Te quiero muchísimo.";
+"Mi amor ❤️<br><br>Hoy quiero recordarte lo maravillosa que eres y lo mucho que me importas. Gracias por tu amor, por tu sonrisa y por cada momento hermoso que compartimos, se que vamos a llegar lejos y vamos a poder cumplir todos nuestrs sueños y metas, sigue siendo la mujer luchadora de la que me enamore.<br><br>Eres una mujer increíble y me siento muy afortunado de tenerte en mi vida. 🌹<br><br>Te amo muchísimo mi amor.";
 
 }
 
@@ -26,5 +26,6 @@ corazon.remove()
 },8000)
 
 }
+
 
 setInterval(crearCorazones,400)
