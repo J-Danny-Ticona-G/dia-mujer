@@ -1,7 +1,7 @@
 body{
 margin:0;
 padding:0;
-height:100vh;
+min-height:100vh;
 font-family:'Poppins',sans-serif;
 
 background-image:url("rosas.jpg");
@@ -13,14 +13,18 @@ animation:moverFondo 20s infinite alternate ease-in-out;
 
 display:flex;
 justify-content:center;
-align-items:center;
-overflow:hidden;
+align-items:flex-start;
+
+padding:40px 20px;
+
+overflow-x:hidden;
 }
 
-/* capa oscura para que el texto se vea */
+/* capa oscura para mejorar lectura */
+
 body::before{
 content:"";
-position:absolute;
+position:fixed;
 top:0;
 left:0;
 width:100%;
@@ -29,13 +33,20 @@ background:rgba(0,0,0,0.35);
 z-index:-1;
 }
 
+/* contenedor */
+
 .contenedor{
 
-background:rgba(255,255,255,0.9);
-padding:40px;
+background:rgba(255,255,255,0.92);
+
+padding:30px;
+
 border-radius:20px;
+
 text-align:center;
-max-width:400px;
+
+max-width:420px;
+width:100%;
 
 box-shadow:0 0 30px rgba(0,0,0,0.4);
 
@@ -43,26 +54,38 @@ animation:entrada 2s;
 
 }
 
+/* titulo */
+
 h1{
 font-family:'Great Vibes',cursive;
 font-size:42px;
 color:#ff2e63;
+margin-top:0;
 }
+
+/* subtitulo */
 
 .subtitulo{
 font-size:18px;
 margin-top:10px;
 }
 
+/* foto */
+
 .foto{
 
-width:200px;
+width:100%;
+max-width:220px;
+
 border-radius:15px;
+
 margin-top:15px;
 
 box-shadow:0 0 15px rgba(0,0,0,0.3);
 
 }
+
+/* boton */
 
 button{
 
@@ -90,25 +113,35 @@ background:#ff004c;
 
 }
 
+/* mensaje */
+
 .mensaje{
 
 margin-top:20px;
+
 font-size:18px;
+
 line-height:1.6;
 
 animation:aparecer 2s;
 
 }
 
+/* corazones */
+
 .corazon{
 
-position:absolute;
+position:fixed;
+
 color:#ff2e63;
+
 animation:flotar 8s linear infinite;
+
+pointer-events:none;
 
 }
 
-/* animacion de corazones */
+/* animaciones */
 
 @keyframes flotar{
 
@@ -123,8 +156,6 @@ opacity:1;
 }
 
 }
-
-/* animacion de entrada */
 
 @keyframes entrada{
 
@@ -152,7 +183,7 @@ opacity:1;
 
 }
 
-/* animacion de viento en rosas */
+/* movimiento suave del fondo */
 
 @keyframes moverFondo{
 
@@ -166,6 +197,33 @@ background-position:55% 45%;
 
 100%{
 background-position:45% 55%;
+}
+
+}
+
+/* RESPONSIVE CELULAR */
+
+@media (max-width:600px){
+
+h1{
+font-size:32px;
+}
+
+.subtitulo{
+font-size:16px;
+}
+
+button{
+font-size:15px;
+padding:10px 20px;
+}
+
+.mensaje{
+font-size:16px;
+}
+
+.contenedor{
+padding:25px;
 }
 
 }
